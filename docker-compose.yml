@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8000:8000"
+
+  client:
+    build:
+      context: ./client
+    environment:
+      SERVER_URL: http://server:8000/RPC2
+    
